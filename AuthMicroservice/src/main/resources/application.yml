@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      uri: http://service-loadbalancer-config:8888 # burası localhosttu google cloudda deploymentta hata aldık. çünkü buraya
+        # config serverın urlini yazmamız gerekiyor. o yüzden de imagelar v2 olarak değişti.
+  config:
+    import: "configserver:"
+  application:
+    name: auth-application

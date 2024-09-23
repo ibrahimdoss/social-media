@@ -1,0 +1,15 @@
+server:
+  port: 8888 # default port for Config Server
+
+spring:
+  application:
+    name: config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/ibrahimdoss/social-media-config-server.git"
+          default-label: "main"
+          skip-ssl-validation: true
+          username: "ibrahimdoss"
+          password: ${GIT_KEY}
